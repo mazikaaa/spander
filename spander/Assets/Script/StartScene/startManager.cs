@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class startManager : MonoBehaviour
 {
     public GameObject Check, AudioPrefab;
-    public GameObject[] mode = new GameObject[2];
     int attack, HP, speed,shot ,energy, music;
     string item,gamemode;
     bool init = false;
@@ -22,13 +21,6 @@ public class startManager : MonoBehaviour
             GameObject Audio = Instantiate(AudioPrefab);
         }
         Audio_SE = GetComponent<AudioSource>();
-
-        gamemode=PlayerPrefs.GetString("GAMEMODE", "normal");
-        if (gamemode == "hard")
-        {
-            mode[0].SetActive(false);
-            mode[1].SetActive(true);
-        }
     }
 
     // Update is called once per frame
@@ -100,22 +92,6 @@ public class startManager : MonoBehaviour
     private void OnApplicationQuit()
     {
         PlayerPrefs.SetInt("MUSIC", 0);
-    }
-
-    public void GameMode(int i)
-    {
-        if (i ==1)
-        {
-            PlayerPrefs.SetString("GAMEMODE", "hard");
-            mode[0].SetActive(false);
-            mode[1].SetActive(true);
-        }
-        else if(i==2)
-        {
-            PlayerPrefs.SetString("GAMEMODE", "normal");
-            mode[0].SetActive(true);
-            mode[1].SetActive(false);
-        }
     }
 
     private void GoStageSelect()

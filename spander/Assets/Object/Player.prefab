@@ -411,9 +411,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0b194e143e720b4ebd5bf12169a3506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stageNo: 0
   HP: 100
   HPMAX: 0
   speed: 5
+  shottime: 0
   bulletPrefab: {fileID: 112316958962448297, guid: 85642bff7dbfce543940ca2c0638b5cc,
     type: 3}
   barrier: {fileID: 2745098221941798326}
@@ -429,6 +431,7 @@ MonoBehaviour:
   SE_wave: {fileID: 8300000, guid: e11a874d9df03a54ab6904bfca3e3a0f, type: 3}
   bulletspeed: 7
   bulletangle: 0
+  shotspan: 0.2
 --- !u!50 &8548004538834985085
 Rigidbody2D:
   serializedVersion: 4

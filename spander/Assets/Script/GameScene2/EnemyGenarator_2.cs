@@ -7,7 +7,7 @@ public class EnemyGenarator_2 : MonoBehaviour
     int i;
     public GameObject[] EnemyPrefab = new GameObject[4];
     float[] EnemyGenerate = new float[4];
-    float[] GenerateTime = { 9.0f, 11.0f, 14.0f,17.0f };
+    public float[] GenerateTime = { 9.0f, 11.0f, 14.0f,17.0f };
     float x, y;
     string gamemode;
     // Start is called before the first frame update

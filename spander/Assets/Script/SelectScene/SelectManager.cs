@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 public class SelectManager: MonoBehaviour
 {
    int music,i;
-    string item;
+    string item,gamemode;
+    public GameObject[] mode = new GameObject[2];
+    public GameObject checkboard;
     public GameObject[] stageButtons; //ステージ選択ボタン配列
     public GameObject[] item_image;
     public GameObject AudioPrefab;
@@ -72,6 +74,13 @@ public class SelectManager: MonoBehaviour
 
         //効果音を操作
         Audio_SE = GetComponent<AudioSource>();
+
+        gamemode = PlayerPrefs.GetString("GAMEMODE", "normal");
+        if (gamemode == "hard")
+        {
+            mode[0].SetActive(false);
+            mode[1].SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -111,6 +120,34 @@ public class SelectManager: MonoBehaviour
     private void OnApplicationQuit()
     {
         PlayerPrefs.SetInt("MUSIC", 0);
+    }
+
+    public void GameMode(int i)
+    {
+        if (i == 1)
+        {
+           // PlayerPrefs.SetString("GAMEMODE", "hard");
+            checkboard.SetActive(true);
+        }
+        else if (i == 2)
+        {
+            PlayerPrefs.SetString("GAMEMODE", "normal");
+            mode[0].SetActive(true);
+            mode[1].SetActive(false);
+        }
+    }
+
+    public void BackButton()
+    {
+        checkboard.SetActive(false);
+    }
+
+    public void GameHardButton()
+    {
+        PlayerPrefs.SetString("GAMEMODE", "hard");
+        checkboard.SetActive(false);
+        mode[0].SetActive(false);
+        mode[1].SetActive(true);
     }
 
 

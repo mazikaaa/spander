@@ -105,8 +105,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimatorControllerTool
-    UnityEditor.TestRunner.dll:
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -116,7 +114,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
     com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
     Assets/Scenes/CostomScene.unity:
@@ -2348,4 +2345,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/GameScene3.unity
   - Assets/Scenes/ItemScene.unity
   - Assets/Scenes/GameScene4.unity
-  playerPath: C:/Users/mazik/3D Objects/spander/game/spaender.exe
+  playerPath: C:/Users/mazik/3D Objects/spander/game/spander.exe

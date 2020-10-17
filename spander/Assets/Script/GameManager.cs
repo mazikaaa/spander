@@ -12,12 +12,13 @@ public class GameManager : MonoBehaviour
     int EnergyAmount, getEnergy;
     int Clearcount = 0;
     string gamemode, item;
+    bool outoshotmode=false,canoutshot=false;
     public int stageNo;
     public float gameCleartime,barrriertime=0.0f;
     public GameObject[] hpgauge = new GameObject[11];
     public GameObject[] hpgauge_frame = new GameObject[7];
     public GameObject[] item_image;
-    public GameObject player,item_frame,barrier;
+    public GameObject player,item_frame,barrier, outoshot_text;
     AudioSource Audio;
     [SerializeField] AudioSource Audio_Manager;
     [SerializeField] AudioClip SE_GameOver,SE_GameClear;
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
         if (gamemode == "normal")
         {
             gameCleartime -= 20.0f;
+            canoutshot = true;
         }
         
         time = GameObject.Find("GameClear_Time");
@@ -136,10 +138,24 @@ public class GameManager : MonoBehaviour
                 hpgauge[HP / 25 + 3].GetComponent<Image>().fillAmount = 0.0f;
             }
         }
-        /*
-        hpgauge[HP / 25-1].GetComponent<Image>().fillAmount = 1.0f;
-        hpgauge[HP / 25-2].GetComponent<Image>().fillAmount =1.0f ;
-        */
+
+        //オートショットモードに切り替える
+        if (Input.GetKeyDown(KeyCode.M) && canoutshot)
+        {
+            if (outoshotmode)
+            {
+                player.GetComponent<PlayerManager>().ActiveOutMode(false);
+                outoshotmode = false;
+                outoshot_text.SetActive(false);
+            }
+            else
+            {
+                player.GetComponent<PlayerManager>().ActiveOutMode(true);
+                outoshotmode = true;
+                outoshot_text.SetActive(true);
+            }
+        }
+     
     }
     //エネルギーを獲得する関数
     public void EnergyGet(int Energy)
@@ -163,6 +179,7 @@ public class GameManager : MonoBehaviour
         energy.SetActive(false);
         HP_text.SetActive(false);
         item_frame.SetActive(false);
+        outoshot_text.SetActive(false);
         gameOver.SetActive(true);
 
         Audio_Manager.GetComponent<AudioSource>().volume=0.03f;
@@ -191,6 +208,7 @@ public class GameManager : MonoBehaviour
         energy.SetActive(false);
         HP_text.SetActive(false);
         item_frame.SetActive(false);
+        outoshot_text.SetActive(false);
         gameClear.SetActive(true);
 
         Audio_Manager.GetComponent<AudioSource>().volume = 0.03f;

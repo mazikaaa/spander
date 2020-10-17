@@ -403,9 +403,6 @@ MonoBehaviour:
   Check: {fileID: 1630623161}
   AudioPrefab: {fileID: 9179115307379660110, guid: a207557e07eb74544847745e7ebb0d33,
     type: 3}
-  mode:
-  - {fileID: 986203553}
-  - {fileID: 67691644}
   SE_start: {fileID: 8300000, guid: c565a1d7ee4328b40b64194cb7f316a9, type: 3}
 --- !u!82 &159693491
 AudioSource:
