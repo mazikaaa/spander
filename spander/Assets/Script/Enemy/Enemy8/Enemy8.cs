@@ -67,7 +67,7 @@ public class Enemy8 : MonoBehaviour
             destroy();
         }
     }
-    void destroy()
+    public void destroy()
     {
         Instantiate(white_particle, transform.position, transform.rotation);
         Instantiate(red_particle, transform.position, transform.rotation);

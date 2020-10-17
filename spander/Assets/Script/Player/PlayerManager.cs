@@ -88,7 +88,7 @@ public class PlayerManager : MonoBehaviour
             {
                 shotkey = 5;
             }
-            else if (Input.GetKeyDown(KeyCode.C)|| Input.GetKeyDown(KeyCode.D))
+            else if (Input.GetKeyDown(KeyCode.C))
             {
                 shotkey = 6;
             }
@@ -150,7 +150,7 @@ public class PlayerManager : MonoBehaviour
             shottime = 0.0f;
             Audio.PlayOneShot(SE_shot);
         }
-        else if ((Input.GetKey(KeyCode.C) || Input.GetKeyDown(KeyCode.D)||shotkey==6) && shottime > shotspan)
+        else if ((Input.GetKey(KeyCode.C)||shotkey==6) && shottime > shotspan)
         {
             Audio.volume = 0.1f;
             GameObject bullet = Instantiate(bulletPrefab, new Vector2(transform.position.x, transform.position.y - 1.0f), Quaternion.Euler(0.0f, 0.0f, 180));

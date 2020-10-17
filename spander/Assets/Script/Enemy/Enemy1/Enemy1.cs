@@ -68,7 +68,7 @@ public class Enemy1 : MonoBehaviour
         }
     }
 
-     void destroy()
+    public void destroy()
     {
         Instantiate(Ene1_particle, transform.position, transform.rotation);
         gameManager.GetComponent<GameManager>().EnergyGet(20);

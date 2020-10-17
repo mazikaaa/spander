@@ -59,7 +59,7 @@ public class Enemy6 : MonoBehaviour
             destroy();
         }
     }
-    void destroy()
+    public void destroy()
     {
         Instantiate(red_particle, transform.position, transform.rotation);
         Destroy(this.gameObject);

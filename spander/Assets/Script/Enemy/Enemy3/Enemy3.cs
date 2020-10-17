@@ -68,7 +68,7 @@ public class Enemy3 : MonoBehaviour
             destroy();
         }
     }
-     void destroy()
+   public  void destroy()
     {
         Instantiate(Ene3_particle, transform.position, transform.rotation);
         Destroy(this.gameObject);

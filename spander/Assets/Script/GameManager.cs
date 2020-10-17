@@ -140,7 +140,7 @@ public class GameManager : MonoBehaviour
         }
 
         //オートショットモードに切り替える
-        if (Input.GetKeyDown(KeyCode.M) && canoutshot)
+        if (Input.GetKeyDown(KeyCode.D) && canoutshot)
         {
             if (outoshotmode)
             {

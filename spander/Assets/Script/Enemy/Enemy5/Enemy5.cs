@@ -65,7 +65,7 @@ public class Enemy5 : MonoBehaviour
             destroy();
         }
     }
-    void destroy()
+    public void destroy()
     {
         Instantiate(blue_particle, transform.position, transform.rotation);
         Instantiate(white_particle, transform.position, transform.rotation);

@@ -25,5 +25,15 @@ public class Enemy1_Collision : MonoBehaviour
         {
             this.gameObject.GetComponent<Enemy1>().Damage(col.gameObject.GetComponent<waveManager>().power);
         }
+
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            col.gameObject.GetComponent<PlayerManager>().Damage(20);
+            this.gameObject.GetComponent<Enemy1>().destroy();
+        }
     }
 }
