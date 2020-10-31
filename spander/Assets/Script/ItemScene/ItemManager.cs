@@ -62,7 +62,7 @@ public class ItemManager : MonoBehaviour
         {
             Audio_SE.PlayOneShot(SE_Get);
             PlayerPrefs.SetString("ITEM", "heart");
-            Energy -= 3000;
+            Energy -= 2500;
             energy_score.GetComponent<Text>().text = Energy.ToString();
             PlayerPrefs.SetInt("ENERGY", Energy);
             for (i = 0; i < 3; i++)
@@ -76,7 +76,7 @@ public class ItemManager : MonoBehaviour
         {
             Audio_SE.PlayOneShot(SE_Get);
             PlayerPrefs.SetString("ITEM", "wave");
-            Energy -= 2500;
+            Energy -= 3000;
             energy_score.GetComponent<Text>().text = Energy.ToString();
             PlayerPrefs.SetInt("ENERGY", Energy);
             for (i = 0; i < 3; i++)

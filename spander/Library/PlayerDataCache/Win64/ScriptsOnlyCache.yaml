@@ -1094,7 +1094,7 @@ ScriptsOnlyBuild:
     className: NetworkIdentity
   - hash:
       serializedVersion: 2
-      Hash: 0162e15669f65936ae48b484fc3e17ab
+      Hash: 559ccc1463db75d1187e7cde75359198
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerManager
@@ -1308,6 +1308,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SectionController
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: CallbackExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Editor
+    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -1766,13 +1778,13 @@ ScriptsOnlyBuild:
     className: Guardian3_wave
   - hash:
       serializedVersion: 2
-      Hash: 97ab1163349a89ee3da1726f64a27eec
+      Hash: 2d6164f68f3c08fde060549cd832891a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyGenerator3
   - hash:
       serializedVersion: 2
-      Hash: 97ab1163349a89ee3da1726f64a27eec
+      Hash: 2d6164f68f3c08fde060549cd832891a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyGenerator1
@@ -1880,7 +1892,7 @@ ScriptsOnlyBuild:
     className: Information
   - hash:
       serializedVersion: 2
-      Hash: dc55640f70405f63824f241057cd7889
+      Hash: eb9e24f024f7ff88140dd1d1db2dfbf9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1988,7 +2000,7 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 2125c11558efdff70c8551b68d8ff153
+      Hash: 2222475c1c6708cf6adc6779f9423d54
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SelectManager
@@ -2006,7 +2018,7 @@ ScriptsOnlyBuild:
     className: NetworkMigrationManager
   - hash:
       serializedVersion: 2
-      Hash: 97ab1163349a89ee3da1726f64a27eec
+      Hash: 2d6164f68f3c08fde060549cd832891a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyGenarator_2
@@ -2066,7 +2078,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 97ab1163349a89ee3da1726f64a27eec
+      Hash: 2d6164f68f3c08fde060549cd832891a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyGenerator4
@@ -2186,7 +2198,7 @@ ScriptsOnlyBuild:
     className: Guardian_Bullet_2
   - hash:
       serializedVersion: 2
-      Hash: 620ad952329cb74c2420ed2792b44be4
+      Hash: 6aefbeeddd154acfa6ac530a54b8d284
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: startManager
@@ -2345,4 +2357,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/GameScene3.unity
   - Assets/Scenes/ItemScene.unity
   - Assets/Scenes/GameScene4.unity
-  playerPath: C:/Users/mazik/3D Objects/spander/game/spander.exe
+  playerPath: C:/Users/mazik/spander.exe
