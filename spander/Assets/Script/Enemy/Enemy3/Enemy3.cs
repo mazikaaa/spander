@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 public class Enemy3 : MonoBehaviour
 {
-    GameObject player,gameManager;
+    GameObject player,gameManager, EnemySE;
     public GameObject bulletPrefab;
     float shottime;
     float shotspan=1.0f;
@@ -22,7 +22,6 @@ public class Enemy3 : MonoBehaviour
         float vx = Mathf.Cos(Mathf.Deg2Rad * direction) * speed;
         float vy = Mathf.Sin(Mathf.Deg2Rad * direction) * speed;
         GetComponent<Rigidbody2D>().velocity = new Vector2(vx, vy);
-        Audio = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
@@ -30,6 +29,8 @@ public class Enemy3 : MonoBehaviour
     {
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("GameManager");
+        EnemySE = GameObject.Find("EnemySE");
+        Audio = EnemySE.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -70,8 +71,10 @@ public class Enemy3 : MonoBehaviour
     }
    public  void destroy()
     {
+        Audio.PlayOneShot(SE_explode);
         Instantiate(Ene3_particle, transform.position, transform.rotation);
-        Destroy(this.gameObject);
         gameManager.GetComponent<GameManager>().EnergyGet(60);
+        Destroy(this.gameObject);
     }
+
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class guardian2: MonoBehaviour
 {
     int shotcount = 0;
-    GameObject player, gameManager;
+    GameObject player, gameManager, EnemySE;
     public GameObject bulletPrefab;
     string gamemode;
     [SerializeField] GameObject boss;
@@ -30,7 +30,8 @@ public class guardian2: MonoBehaviour
     {
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("GameManager");
-        Audio = GetComponent<AudioSource>();
+        EnemySE = GameObject.Find("EnemySE");
+        Audio = EnemySE.GetComponent<AudioSource>();
         gamemode = PlayerPrefs.GetString("GAMEMODE", "normal");
         HP = 800;
         if (gamemode == "hard")
@@ -92,6 +93,7 @@ public class guardian2: MonoBehaviour
     }
     void destroy()
     {
+        Audio.PlayOneShot(SE_explode);
         boss.GetComponent<LastBoss>().limiter += 1;
         boss.GetComponent<BossAttack>().limiter += 1;
         Instantiate(white_particle, transform.position, transform.rotation);

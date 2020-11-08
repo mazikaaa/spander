@@ -10,12 +10,13 @@ public class boss_Game : MonoBehaviour
     int HP,BOSS_HP,HPdalta;
     int EnergyAmount, getEnergy;
     int Clearcount = 0;
+    bool cationflag = true;
     string gamemode, item;
     public int stageNo;
     public float barrriertime = 0.0f;
     public GameObject[] hpgauge = new GameObject[11];
     public GameObject[] hpgauge_frame = new GameObject[7];
-    public GameObject boss_guage,boss_text;
+    public GameObject boss_guage,boss_text,cation_text;
     public GameObject[] item_image;
     public GameObject player, item_frame, barrier,BOSS;
     AudioSource Audio;
@@ -218,4 +219,5 @@ public class boss_Game : MonoBehaviour
     {
         PlayerPrefs.SetInt("MUSIC", 0);
     }
+
 }

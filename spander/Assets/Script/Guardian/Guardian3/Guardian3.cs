@@ -7,7 +7,8 @@ public class Guardian3 : MonoBehaviour
     int shot;
     int shotcount = 0;
     string gamemode;
-    GameObject player, gameManager;
+    GameObject player, gameManager, EnemySE;
+    AudioSource Audio;
     [SerializeField] GameObject[] bulletPrefab=new GameObject[4];
     [SerializeField] GameObject boss;
     float shottime;
@@ -16,6 +17,7 @@ public class Guardian3 : MonoBehaviour
     float rollAngle = 0.0f;
     float speed = 2.5f;
     [SerializeField] GameObject red_particle, blue_particle;
+    [SerializeField] AudioClip SE_explode;
 
     // Start is called before the first frame update
 
@@ -30,6 +32,8 @@ public class Guardian3 : MonoBehaviour
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("GameManager");
         gamemode = PlayerPrefs.GetString("GAMEMODE", "normal");
+        EnemySE = GameObject.Find("EnemySE");
+        Audio = EnemySE.GetComponent<AudioSource>();
         HP = 800;
         if (gamemode == "hard")
         {
@@ -70,6 +74,7 @@ public class Guardian3 : MonoBehaviour
     }
     void destroy()
     {
+        Audio.PlayOneShot(SE_explode);
         boss.GetComponent<LastBoss>().limiter += 1;
         boss.GetComponent<BossAttack>().limiter += 1;
         Instantiate(red_particle, transform.position, transform.rotation);

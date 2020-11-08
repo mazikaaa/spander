@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 public class Enemy1 : MonoBehaviour
 {
-    GameObject player,gameManager;
+    GameObject player,gameManager,EnemySE;
     public GameObject bulletPrefab;
     float shottime;
     float shotspan=1.0f;
@@ -29,7 +29,8 @@ public class Enemy1 : MonoBehaviour
     {
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("GameManager");
-        Audio = GetComponent<AudioSource>();
+        EnemySE = GameObject.Find("EnemySE");
+        Audio = EnemySE.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -70,6 +71,7 @@ public class Enemy1 : MonoBehaviour
 
     public void destroy()
     {
+        Audio.PlayOneShot(SE_explode);
         Instantiate(Ene1_particle, transform.position, transform.rotation);
         gameManager.GetComponent<GameManager>().EnergyGet(20);
         Destroy(this.gameObject);

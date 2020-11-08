@@ -8,7 +8,8 @@ public class guardian1: MonoBehaviour
     float shotspeed,shotdelete;
     int shotcount = 0;
     string gamemode;
-    GameObject player, gameManager;
+    GameObject player, gameManager,EnemySE;
+    AudioSource Audio;
     [SerializeField] GameObject[] bulletPrefab=new GameObject[7];
     [SerializeField] GameObject boss;
     float shottime;
@@ -32,6 +33,8 @@ public class guardian1: MonoBehaviour
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("GameManager");
         gamemode = PlayerPrefs.GetString("GAMEMODE", "normal");
+        EnemySE = GameObject.Find("EnemySE");
+        Audio = EnemySE.GetComponent<AudioSource>();
         HP = 800;
         if (gamemode == "hard")
         {
@@ -78,6 +81,7 @@ public class guardian1: MonoBehaviour
     }
     void destroy()
     {
+        Audio.PlayOneShot(SE_explode);
         boss.GetComponent<LastBoss>().limiter+=1;
         boss.GetComponent<BossAttack>().limiter += 1;
         Instantiate(yellow_particle, transform.position, transform.rotation);

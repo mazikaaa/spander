@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -10,14 +11,15 @@ public class PlayerManager : MonoBehaviour
     int shotkey = 0;//オートショット時にどの方向に球を撃つか決める
     public int HP,HPMAX;
     public float speed=5.2f,shottime=0.0f;
-    public GameObject bulletPrefab,barrier,wavePrefab;
+    public GameObject bulletPrefab,barrier,wavePrefab,cation;
     GameObject gamemanager;
     AudioSource Audio;
+    Animator anim,cat_anim;
     [SerializeField] GameObject player_particle,yellow_particle;
-    [SerializeField]AudioClip SE_shot, SE_heart, SE_barrier, SE_wave;
+    [SerializeField]AudioClip SE_shot, SE_heart, SE_barrier, SE_wave,Damage_SE;
     public float bulletspeed=7.0f;
     public float bulletangle,shotspan;
-    bool outoshotflag = false;
+    bool outoshotflag = false,damageflag=true,cationflag=true;
     string itemflag;
 
     public enum MOVE
@@ -35,6 +37,8 @@ public class PlayerManager : MonoBehaviour
         Audio = GetComponent<AudioSource>();
         gamemanager = GameObject.Find("GameManager");
 
+        anim = GetComponent<Animator>();
+        cat_anim = cation.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -247,7 +251,19 @@ public class PlayerManager : MonoBehaviour
 
     public void Damage(int damage)
     {
-        HP -= damage;
+        if (damageflag)
+        {
+            HP -= damage;
+            if (HP <= 50&&cationflag)
+            {
+                CationDanger();
+                cationflag = false;
+            }
+
+            anim.SetTrigger("Damage");
+            Audio.PlayOneShot(Damage_SE);
+            damageflag = false;
+        }
     }
 
     public void DeleteBarrier()
@@ -259,6 +275,18 @@ public class PlayerManager : MonoBehaviour
     {
         outoshotflag = flag;
         shotkey = 0;
+    }
+
+    void SetDamegeFlag()
+    {
+        damageflag = true;
+        Debug.Log(damageflag);
+    }
+
+    void CationDanger()
+    {
+        cation.GetComponent<Text>().text = "Danger";
+        cat_anim.SetTrigger("Cation");
     }
 
 }

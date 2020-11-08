@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wavePrefab: {fileID: 2802844054208368051, guid: 07a15cca3b6c00046bc8cc432f15ce8d,
     type: 3}
-  SE_explode: {fileID: 8300000, guid: 6c7246ec2c54853409d201058751616c, type: 3}
+  SE_explode: {fileID: 8300000, guid: 5e40ef22e15fd114db10464859c136a9, type: 3}
   red_particle: {fileID: 8406478817768460998, guid: 9df446831f3e8854a920f76b7273a5b2,
     type: 3}
 --- !u!114 &3695874166911755353

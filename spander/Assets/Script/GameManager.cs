@@ -12,14 +12,15 @@ public class GameManager : MonoBehaviour
     int EnergyAmount, getEnergy;
     int Clearcount = 0;
     string gamemode, item;
-    bool outoshotmode=false,canoutshot=false;
+    bool outoshotmode=false,canoutshot=false,cationflag=true;
     public int stageNo;
     public float gameCleartime,barrriertime=0.0f;
     public GameObject[] hpgauge = new GameObject[11];
     public GameObject[] hpgauge_frame = new GameObject[7];
     public GameObject[] item_image;
-    public GameObject player,item_frame,barrier, outoshot_text;
+    public GameObject player,item_frame,barrier, outoshot_text,cation_text;
     AudioSource Audio;
+    Animator cat_anim;
     [SerializeField] AudioSource Audio_Manager;
     [SerializeField] AudioClip SE_GameOver,SE_GameClear;
 
@@ -80,6 +81,9 @@ public class GameManager : MonoBehaviour
         //BGM関連
         Audio = GetComponent<AudioSource>();
 
+        //アニメーション関連
+        cat_anim = cation_text.GetComponent<Animator>();
+
     }
 
 
@@ -117,6 +121,13 @@ public class GameManager : MonoBehaviour
 
         }
 
+        if (gameCleartime < 30.0f&&cationflag)
+        {
+            CationTime();
+            time.GetComponent<Text>().color = new Vector4(255, 140, 0, 255);
+            cationflag = false;
+        }
+
         HPstack = HP / 25;
         HP = player.GetComponent<PlayerManager>().HP;
         if (HPstack != HP / 25)
@@ -138,6 +149,7 @@ public class GameManager : MonoBehaviour
                 hpgauge[HP / 25 + 3].GetComponent<Image>().fillAmount = 0.0f;
             }
         }
+        hpgauge[HP / 25].GetComponent<Image>().fillAmount = 0.04f * (HP % 25);
 
         //オートショットモードに切り替える
         if (Input.GetKeyDown(KeyCode.D) && canoutshot)
@@ -236,6 +248,13 @@ public class GameManager : MonoBehaviour
     {
         item_image[i].SetActive(false);
     }
+
+    private void CationTime()
+    {
+        cation_text.GetComponent<Text>().text = "30.00";
+        cat_anim.SetTrigger("Cation");
+    }
+
     private void OnApplicationQuit()
     {
         PlayerPrefs.SetInt("MUSIC", 0);

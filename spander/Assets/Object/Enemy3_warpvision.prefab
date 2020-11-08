@@ -100,7 +100,7 @@ MonoBehaviour:
     type: 3}
   Ene3_particle: {fileID: 8530586602864688161, guid: 623562bb9d82d1e4eade45444807b921,
     type: 3}
-  SE_explode: {fileID: 8300000, guid: 6c7246ec2c54853409d201058751616c, type: 3}
+  SE_explode: {fileID: 8300000, guid: 5e40ef22e15fd114db10464859c136a9, type: 3}
 --- !u!114 &7229201813254883549
 MonoBehaviour:
   m_ObjectHideFlags: 0

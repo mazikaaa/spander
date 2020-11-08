@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 9075197979718950781, guid: f38395a64d3f58548971237caed0eb80,
     type: 3}
-  SE_explode: {fileID: 8300000, guid: 6c7246ec2c54853409d201058751616c, type: 3}
+  SE_explode: {fileID: 8300000, guid: 5e40ef22e15fd114db10464859c136a9, type: 3}
   red_particle: {fileID: 8406478817768460998, guid: 9df446831f3e8854a920f76b7273a5b2,
     type: 3}
   white_particle: {fileID: 1184296536672669185, guid: 362f482440385ee479fc1653ab15fc56,
