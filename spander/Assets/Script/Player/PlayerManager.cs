@@ -13,10 +13,11 @@ public class PlayerManager : MonoBehaviour
     public float speed=5.2f,shottime=0.0f;
     public GameObject bulletPrefab,barrier,wavePrefab,cation;
     GameObject gamemanager;
+    public Text debug;
     AudioSource Audio;
     Animator anim,cat_anim;
     [SerializeField] GameObject player_particle,yellow_particle;
-    [SerializeField]AudioClip SE_shot, SE_heart, SE_barrier, SE_wave,Damage_SE;
+    [SerializeField]AudioClip SE_shot, SE_heart, SE_barrier, SE_wave,Damage_SE,Danger_SE;
     public float bulletspeed=7.0f;
     public float bulletangle,shotspan;
     bool outoshotflag = false,damageflag=true,cationflag=true;
@@ -257,6 +258,7 @@ public class PlayerManager : MonoBehaviour
             if (HP <= 50&&cationflag)
             {
                 CationDanger();
+                Audio.PlayOneShot(Danger_SE);
                 cationflag = false;
             }
 

@@ -4177,6 +4177,11 @@ PrefabInstance:
       propertyPath: cation_text
       value: 
       objectReference: {fileID: 687768668}
+    - target: {fileID: 3191915850018373516, guid: c0df77bd8b947af479b3482aff444b30,
+        type: 3}
+      propertyPath: debug
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2936109293045511882, guid: c0df77bd8b947af479b3482aff444b30,
         type: 3}
       propertyPath: m_Name
@@ -4372,6 +4377,11 @@ PrefabInstance:
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 297451603}
+    - target: {fileID: 3191915850018373517, guid: c0df77bd8b947af479b3482aff444b30,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0df77bd8b947af479b3482aff444b30, type: 3}
 --- !u!1001 &6395784483770755778

@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     AudioSource Audio;
     Animator cat_anim;
     [SerializeField] AudioSource Audio_Manager;
-    [SerializeField] AudioClip SE_GameOver,SE_GameClear;
+    [SerializeField] AudioClip SE_GameOver,SE_GameClear,Time_SE;
 
     GameObject time, timetext, energy, energy_text, HP_text,Debug;
     public GameObject gameClear, gameOver;
@@ -45,7 +45,6 @@ public class GameManager : MonoBehaviour
         energy = GameObject.Find("Energy_Score");
         energy_text = GameObject.Find("Energy");
         HP_text = GameObject.Find("HP");
-
 
         //アイテム関連
         item = PlayerPrefs.GetString("ITEM", "none");
@@ -124,6 +123,8 @@ public class GameManager : MonoBehaviour
         if (gameCleartime < 30.0f&&cationflag)
         {
             CationTime();
+            Audio.volume = 0.3f;
+            Audio.PlayOneShot(Time_SE);
             time.GetComponent<Text>().color = new Vector4(255, 140, 0, 255);
             cationflag = false;
         }

@@ -19,6 +19,7 @@ public class bulletManager : MonoBehaviour
         speed = PlayerPrefs.GetFloat("S_S", 7.0f);
         deletespan=PlayerPrefs.GetFloat("S_T",5.0f);
         SetVelocity(angle, speed);
+
     }
 
     // Update is called once per frame

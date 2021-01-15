@@ -74,8 +74,12 @@ MonoBehaviour:
   player: {fileID: 0}
   item_frame: {fileID: 0}
   barrier: {fileID: 0}
+  outoshot_text: {fileID: 0}
+  cation_text: {fileID: 0}
   Audio_Manager: {fileID: 0}
   SE_GameOver: {fileID: 8300000, guid: 74647a2a2ba6ecb48a9700921e0be2d6, type: 3}
+  SE_GameClear: {fileID: 0}
+  Time_SE: {fileID: 8300000, guid: 1d436b1e6431785439f80c6185cf3e36, type: 3}
   gameClear: {fileID: 0}
   gameOver: {fileID: 0}
 --- !u!82 &3191915850018373517

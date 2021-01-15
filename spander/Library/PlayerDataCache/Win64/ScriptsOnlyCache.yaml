@@ -105,8 +105,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimatorControllerTool
-    UnityEditor.TestRunner.dll:
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -116,7 +114,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
     com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
     Assets/Scenes/CostomScene.unity:
@@ -1121,7 +1118,7 @@ ScriptsOnlyBuild:
     className: NetworkIdentity
   - hash:
       serializedVersion: 2
-      Hash: 56d47423ee9e7187e39100c86d8be536
+      Hash: 4507a77d00cd239b14cdad2ec7cf6ccb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerManager
@@ -1907,7 +1904,7 @@ ScriptsOnlyBuild:
     className: Information
   - hash:
       serializedVersion: 2
-      Hash: 236cd69b64eae3af8e4ba3aa088d646a
+      Hash: 3e92ac89354fcfeaf8698d4c077d2d4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager

@@ -432,6 +432,7 @@ MonoBehaviour:
   SE_barrier: {fileID: 8300000, guid: 76084b631c6930f45a564c6ef10d8495, type: 3}
   SE_wave: {fileID: 8300000, guid: e11a874d9df03a54ab6904bfca3e3a0f, type: 3}
   Damage_SE: {fileID: 8300000, guid: 59270ee481f430f45a5893a5b7a8bc1b, type: 3}
+  Danger_SE: {fileID: 8300000, guid: b4c4e92b47977fa4f921ae2a583f36a7, type: 3}
   bulletspeed: 7
   bulletangle: 0
   shotspan: 0.2

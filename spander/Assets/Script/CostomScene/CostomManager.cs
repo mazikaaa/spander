@@ -246,7 +246,7 @@ public class CostomManager : MonoBehaviour
             Attack-= 3;
         }
         PlayerPrefs.SetInt("ATTACK", Attack);
-        PlayerPrefs.SetInt("ARRACKLV", Attack_LV);
+        PlayerPrefs.SetInt("ATTACKLV", Attack_LV);
     }
 
     public void PushSpeedminus()
