@@ -25,7 +25,6 @@
   </h5>
   
   <h5>ゲーム画像<br>
-  ![image](C:/Users/mazik/Downloads/spamder_battle.png)
   
   <h5>開発環境<br>
   ・Unity(2019.1.14f)
