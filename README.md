@@ -25,7 +25,7 @@
   </h5>
   
   <h5>ゲーム画像<br>
-![spamder_title (小)]
+<img scr="https://user-images.githubusercontent.com/45326553/106375902-9a207600-63d3-11eb-974d-b21262e45634.png">
   (https://user-images.githubusercontent.com/45326553/106375902-9a207600-63d3-11eb-974d-b21262e45634.png)
 ![spamder_battle (小)]
   (https://user-images.githubusercontent.com/45326553/106375904-9ab90c80-63d3-11eb-922e-876b92936056.png)
