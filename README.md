@@ -3,7 +3,7 @@
 ②「gamefile_spander」のフォルダをクリック  
 ③「spander.exe」をクリック  
 
-### ゲームタイトル:spander
+## ゲームタイトル:spander
 ### ジャンル:2Dシューティングゲーム
 
 #### 内容
