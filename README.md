@@ -20,8 +20,10 @@
 　このゲーム、正直に言って最初はクリアするのが難しいです。ですが、エネルギーを使うことで、プレイヤーを強化したりアイテムを買ったりしてカスタイマイズすることができ、クリアしやすくなります。エネルギーはステージに登場する敵を倒すことで手に入れることが出来ます。上級者の方は自分の実力のみで遊ぶ・初心者の方はカスタマイズを使ってゲームの難易度を下げて遊ぶといった、遊ぶ人の熟練度によって難易度を自由に調整できます。  
   
 #### ゲーム画像  
-![spamder_title (小)](https://user-images.githubusercontent.com/45326553/106375902-9a207600-63d3-11eb-974d-b21262e45634.png)　![spamder_battle (小)](https://user-images.githubusercontent.com/45326553/106375904-9ab90c80-63d3-11eb-922e-876b92936056.png)
-![spamder_costom (小)](https://user-images.githubusercontent.com/45326553/106375905-9b51a300-63d3-11eb-89af-3ac482301119.png)　![spander_select](https://user-images.githubusercontent.com/45326553/106376473-fe920400-63d8-11eb-8447-4703dd43549d.png)
+
+![spamder_battle (小)](https://user-images.githubusercontent.com/45326553/106378110-5171b880-63e5-11eb-845c-29b079e9f959.png) ![spamder_costom (小)](https://user-images.githubusercontent.com/45326553/106378111-52a2e580-63e5-11eb-8637-89a9dea05c6e.png)
+![spamder_title (小)](https://user-images.githubusercontent.com/45326553/106378112-52a2e580-63e5-11eb-8d5e-c4ba92fbf529.png) ![spander_select](https://user-images.githubusercontent.com/45326553/106378114-533b7c00-63e5-11eb-9cbd-2655bb698b6d.png)
+
 
   ##### 開発環境
   ・Unity(2019.1.14f)  
