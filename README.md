@@ -1,10 +1,9 @@
 # spander
 
-<h2>ゲームの開き方<br>  
-① code(黄緑色のボタン)→Download ZIPよりフォルダをダウンロード<br>
-②「gamefile_spander」のフォルダをクリック<br>
-③「spander.exe」をクリック<br>
-  </h2>
+##ゲームの開き方
+① code(黄緑色のボタン)→Download ZIPよりフォルダをダウンロード
+②「gamefile_spander」のフォルダをクリック
+③「spander.exe」をクリック
 
 <h5>内容</br>
 2Dシューティングゲームになっています。<br>
