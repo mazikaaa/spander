@@ -25,7 +25,7 @@
 ![spamder_title (小)](https://user-images.githubusercontent.com/45326553/106378112-52a2e580-63e5-11eb-8d5e-c4ba92fbf529.png) ![spander_select](https://user-images.githubusercontent.com/45326553/106378114-533b7c00-63e5-11eb-9cbd-2655bb698b6d.png)
 
  ##### 作成時間
- 時間
+ 90～100時間
  
  ##### 作成人数
  １人(自分のみ)  
