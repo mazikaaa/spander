@@ -24,6 +24,11 @@
 ![spamder_battle (小)](https://user-images.githubusercontent.com/45326553/106378110-5171b880-63e5-11eb-845c-29b079e9f959.png) ![spamder_costom (小)](https://user-images.githubusercontent.com/45326553/106378111-52a2e580-63e5-11eb-8637-89a9dea05c6e.png)
 ![spamder_title (小)](https://user-images.githubusercontent.com/45326553/106378112-52a2e580-63e5-11eb-8d5e-c4ba92fbf529.png) ![spander_select](https://user-images.githubusercontent.com/45326553/106378114-533b7c00-63e5-11eb-9cbd-2655bb698b6d.png)
 
+ ##### 作成時間
+ 時間
+ 
+ ##### 作成人数
+ １人(自分のみ)  
 
   ##### 開発環境
   ・Unity(2019.1.14f)  
