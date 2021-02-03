@@ -1,7 +1,8 @@
 ## ゲームの開き方
 ① code(黄緑色のボタン)→Download ZIPよりフォルダをダウンロード  
 ②「gamefile_spander」のフォルダをクリック  
-③「spander.exe」をクリック  
+③「spander.exe」をクリック 
+※windowsでのゲームプレイを推奨します。
 
 ## ゲームタイトル:spander
 ### ジャンル:2Dシューティングゲーム
