@@ -2,17 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet_enemy2 : MonoBehaviour
+public class bullet_enemy2 : BulletBase
 {
-    public float angle;
-    float speed = 4.5f;
-    float deletetime;
-    float deletespan = 5.0f;
-    GameObject enemy1;
     // Start is called before the first frame update
     void Start()
     {
-        SetVelocity(angle, speed);
+        base.Start();
     }
 
     // Update is called once per frame
@@ -24,12 +19,5 @@ public class bullet_enemy2 : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-    }
-
-    void SetVelocity(float direction, float speed)
-    {
-        float vx = Mathf.Cos(direction) * speed;
-        float vy = Mathf.Sin(direction) * speed;
-        GetComponent<Rigidbody2D>().velocity = new Vector2(vx, vy);
     }
 }

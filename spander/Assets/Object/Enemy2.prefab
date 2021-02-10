@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7606804787304946844}
   - component: {fileID: 7606804787304946845}
   - component: {fileID: 7606804787304946846}
-  - component: {fileID: 7606804787304946847}
   - component: {fileID: 7606804787304946784}
   m_Layer: 0
   m_Name: Enemy2
@@ -130,18 +129,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7606804787304946847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7606804787304946785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4a891168a419a848ac5531408e6bdc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7606804787304946784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,6 +143,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2641269698594570344, guid: 55b7a0e52219b6540adb47e1ffbda027,
     type: 3}
-  Ene2_particle: {fileID: 8406478817768460998, guid: 9df446831f3e8854a920f76b7273a5b2,
+  Ene_particle: {fileID: 8406478817768460998, guid: 9df446831f3e8854a920f76b7273a5b2,
     type: 3}
+  enemybase: {fileID: 7606804787304946784}
+  speed: 3
+  getscore: 30
+  attack: 20
+  shotspan: 1
+  HP: 90
   SE_explode: {fileID: 8300000, guid: 5e40ef22e15fd114db10464859c136a9, type: 3}

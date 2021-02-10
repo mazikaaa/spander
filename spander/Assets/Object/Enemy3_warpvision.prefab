@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 911949308503045269}
   - component: {fileID: 9154616529274851761}
   - component: {fileID: 6441315765993072938}
-  - component: {fileID: 7229201813254883549}
   - component: {fileID: 3495583970986367642}
   - component: {fileID: 6123116732815183836}
   - component: {fileID: 3575519255766359154}
@@ -98,21 +97,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5524407556689870128, guid: d1da1806f94c7a845845d654d9966055,
     type: 3}
-  Ene3_particle: {fileID: 8530586602864688161, guid: 623562bb9d82d1e4eade45444807b921,
+  Ene_particle: {fileID: 8530586602864688161, guid: 623562bb9d82d1e4eade45444807b921,
     type: 3}
+  enemybase: {fileID: 6441315765993072938}
+  speed: 4
+  getscore: 60
+  attack: 20
+  shotspan: 1
+  HP: 100
   SE_explode: {fileID: 8300000, guid: 5e40ef22e15fd114db10464859c136a9, type: 3}
---- !u!114 &7229201813254883549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648988247090330457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4cc66f5fe1fbc644b9de37f4928414c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3495583970986367642
 MonoBehaviour:
   m_ObjectHideFlags: 0

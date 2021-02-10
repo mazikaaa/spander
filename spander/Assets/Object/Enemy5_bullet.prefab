@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7957412840509275733}
   - component: {fileID: 954818010832315488}
   - component: {fileID: 1548091792893736164}
-  - component: {fileID: 2261783642985968277}
   m_Layer: 0
   m_Name: Enemy5_bullet
   m_TagString: bullet.enemy
@@ -142,15 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbde37e2edd709e46b86e75f518992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2261783642985968277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3112557173152682220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a7184573c7be1e47b3d7d8d0f11435c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  angle: 0
+  speed: 7
+  attack: 15
+  deletespan: 7
+  rigid2D: {fileID: 7957412840509275733}

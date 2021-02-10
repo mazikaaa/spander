@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8727760443572348596}
   - component: {fileID: 4107741948501791530}
   - component: {fileID: 6173162222976484882}
-  - component: {fileID: 8459513106070836508}
   - component: {fileID: 8280625584962967041}
   m_Layer: 0
   m_Name: bullet_enemy7_main
@@ -120,18 +119,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.04
---- !u!114 &8459513106070836508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3375525524596697660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1551273bf03c66f41814acd1c4b2ea68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8280625584962967041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,5 +132,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angle: 0
+  speed: 10
+  attack: 30
+  deletespan: 5
+  rigid2D: {fileID: 4107741948501791530}
   bulletPrefab: {fileID: 167852629465478638, guid: cf06affce017f7f449b1ae71c2f35395,
     type: 3}

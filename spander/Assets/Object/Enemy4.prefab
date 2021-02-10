@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1896808939485588686}
   - component: {fileID: 6024618337164890712}
   - component: {fileID: 4240115512374248863}
-  - component: {fileID: 7482351221552086586}
   m_Layer: 0
   m_Name: Enemy4
   m_TagString: Enemy
@@ -144,20 +143,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 8513012790787929917, guid: 71a84c348f4686b4fb072b3e1ac51def,
     type: 3}
+  Ene_particle: {fileID: 0}
+  enemybase: {fileID: 4240115512374248863}
+  speed: 2
+  getscore: 50
+  attack: 20
+  shotspan: 0.4
+  HP: 120
   SE_explode: {fileID: 8300000, guid: 5e40ef22e15fd114db10464859c136a9, type: 3}
   red_particle: {fileID: 8406478817768460998, guid: 9df446831f3e8854a920f76b7273a5b2,
     type: 3}
   yellow_particle: {fileID: 2682710747785647791, guid: 051f82cde2d97a7458aedac10b5f3e66,
     type: 3}
---- !u!114 &7482351221552086586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522088844809873857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dde8aa24316560849a5f5f293382af76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

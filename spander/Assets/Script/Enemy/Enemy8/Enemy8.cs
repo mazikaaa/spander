@@ -4,32 +4,15 @@ using UnityEngine;
 
 using System.Threading.Tasks;
 
-public class Enemy8 : MonoBehaviour
+public class Enemy8 :EnemyBase
 {
-    int shotcount = 0;
-    GameObject player, gameManager, EnemySE;
-    public GameObject bulletPrefab;
-    float shottime,range;
-    float shotspan = 0.3f;
-    int HP = 100;
-    float speed = 5.0f;
-    AudioSource Audio;
-    [SerializeField] AudioClip SE_explode;
-    [SerializeField] GameObject red_particle,white_particle;
+    private float range;
 
-    void SetVelocity(float direction, float speed)
-    {
-        float vx = Mathf.Cos(Mathf.Deg2Rad * direction) * speed;
-        float vy = Mathf.Sin(Mathf.Deg2Rad * direction) * speed;
-        GetComponent<Rigidbody2D>().velocity = new Vector2(vx, vy);
-    }
+    [SerializeField] GameObject red_particle,white_particle;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
-        gameManager = GameObject.Find("GameManager");
-        EnemySE = GameObject.Find("EnemySE");
-        Audio = EnemySE.GetComponent<AudioSource>();
+        base.Start();
     }
 
     // Update is called once per frame
@@ -37,43 +20,28 @@ public class Enemy8 : MonoBehaviour
     {
         shottime += Time.deltaTime;
 
-        // プレイヤーと炎の座標所得
-        Vector2 next = player.transform.position;
-        Vector2 now = transform.position;
-        // 目的となる角度を取得する
-        Vector2 d = next - now;
-        float targetAngle = Mathf.Atan2(d.y, d.x) * Mathf.Rad2Deg;
-
-        // 画像の角度を移動方向に向ける
-        var renderer = GetComponent<SpriteRenderer>();
-        renderer.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, targetAngle - 90));
-
-
-        // 新しい速度を設定する
-        SetVelocity(targetAngle, speed);
+        SetAngle();
+        SetVelocity();
 
         if (shottime > shotspan)
         {
-            range = Random.Range(-20.0f, 20.0f);
-            GameObject bullet = Instantiate(bulletPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.Euler(new Vector3(0, 0, targetAngle - 90)));
-            bullet.GetComponent<bullet8_enemy>().angle = (targetAngle+range) * Mathf.Deg2Rad;
-            shottime = 0;
+            GenerateBullet();
         }
     }
-    public void Damage(int damage)
+
+    protected override void GenerateBullet()
     {
-        HP -= damage;
-        if (HP <= 0)
-        {
-            destroy();
-        }
+        range = Random.Range(-20.0f, 20.0f);
+        GameObject bullet = Instantiate(bulletPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.Euler(new Vector3(0, 0, targetangle - 90)));
+        bullet.GetComponent<bullet8_enemy>().angle = (targetangle + range) * Mathf.Deg2Rad;
+        shottime = 0;
     }
-    public void destroy()
+    protected override void Destroy()
     {
         Audio.PlayOneShot(SE_explode);
         Instantiate(white_particle, transform.position, transform.rotation);
         Instantiate(red_particle, transform.position, transform.rotation);
-        gameManager.GetComponent<GameManager>().EnergyGet(100);
+        gameManager.GetComponent<GameManager>().EnergyGet(getscore);
         Destroy(this.gameObject);
     }
 

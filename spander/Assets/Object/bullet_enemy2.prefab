@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2641269698594570343}
   - component: {fileID: 7960167187640466815}
   - component: {fileID: 3161682186029113486}
-  - component: {fileID: 4981400277579567542}
   - component: {fileID: 8801424592065131100}
   m_Layer: 0
   m_Name: bullet_enemy2
@@ -130,18 +129,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.079726115, y: 0.08}
   m_EdgeRadius: 0
---- !u!114 &4981400277579567542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2641269698594570344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 779178647f00e9c44a0dd73a8a5bf153, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8801424592065131100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,3 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angle: 0
+  speed: 5
+  attack: 10
+  deletespan: 4.5
+  rigid2D: {fileID: 7960167187640466815}

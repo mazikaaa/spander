@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet7_enemy_main : MonoBehaviour
+public class bullet7_enemy_main : BulletBase
 {
-    public float angle;
-    float speed = 10.0f;
     public GameObject bulletPrefab;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        base.Start();
     }
 
     // Update is called once per frame
@@ -38,14 +36,7 @@ public class bullet7_enemy_main : MonoBehaviour
             bullet8.GetComponent<bullet7_enemy_sub>().angle = 315.0f * Mathf.Deg2Rad;
             Destroy(this.gameObject);
         }
-        SetVelocity(angle, speed);
-    }
-
-    void SetVelocity(float direction, float speed)
-    {
-        float vx = Mathf.Cos(direction) * speed;
-        float vy = Mathf.Sin(direction) * speed;
-        GetComponent<Rigidbody2D>().velocity = new Vector2(vx, vy);
+        SetVelocity();
     }
 }
 
