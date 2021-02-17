@@ -34,7 +34,6 @@ public class Blue_Guardian_bullet : MonoBehaviour
     void Update()
     {
 
-        // プレイヤーと炎の座標所得
         Vector2 next = player.transform.position;
         Vector2 now = transform.position;
         // 目的となる角度を取得する

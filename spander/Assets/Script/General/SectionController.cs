@@ -4,8 +4,8 @@ using System.Collections;
 public class SectionController : MonoBehaviour
 {
 
-    // セクションのカメラ範囲制御
-    public Transform SectionArea;
+    // マップのカメラ範囲制御
+    public Transform sectionarea;
     public float rect_width, rect_height, collider_depth;
 
     public Rect SectionRect;
@@ -18,24 +18,25 @@ public class SectionController : MonoBehaviour
     {
         // マネージャ取得
 
-        // セクション範囲定義
-        SectionRect = new Rect(SectionArea.position.x, SectionArea.position.y, rect_width, rect_height);
-        camera.GetComponent<CameraController>().SectionRect = SectionRect;
+        // マップの範囲定義
+        SectionRect = new Rect(sectionarea.position.x, sectionarea.position.y, rect_width, rect_height);
+        //カメラ側にマップの範囲を渡す
+        camera.GetComponent<CameraController>().setSectionRect(SectionRect);
 
-        // セクション判定用オブジェクトに範囲を設定
-      //  SectionArea.GetComponent<SectionArea>().setSectionRect(SectionRect);
-
-        // CameraControllerにセクション範囲を渡すための判定定義
-        SectionArea.transform.position = new Vector3(SectionRect.center.x, SectionRect.center.y, transform.position.z);
-        BoxCollider boxCollider = SectionArea.GetComponent<BoxCollider>();
+        
+        // マップの範囲（マップの端）に当たり判定を展開する(マップの外に自機が出来ないようにする)
+        sectionarea.transform.position = new Vector3(SectionRect.center.x, SectionRect.center.y, transform.position.z);
+        BoxCollider boxCollider = sectionarea.GetComponent<BoxCollider>();
         boxCollider.size = new Vector3(SectionRect.width, SectionRect.height, collider_depth);
+        
 
        
     }
 
+    // マップ範囲を描画(マップ範囲の確認用)
     void OnDrawGizmos()
     {
-        // セクション範囲を描画
+       
         float base_depth = -10;
 
             Vector3 lower_left = new Vector3(SectionRect.xMin, SectionRect.yMax, base_depth);

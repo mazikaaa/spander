@@ -902,7 +902,7 @@ GameObject:
   - component: {fileID: 471435073}
   - component: {fileID: 471435074}
   m_Layer: 0
-  m_Name: SectionArea
+  m_Name: MapArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2748,7 +2748,7 @@ GameObject:
   - component: {fileID: 1564617435}
   - component: {fileID: 1564617436}
   m_Layer: 0
-  m_Name: Section1
+  m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2781,7 +2781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c970320cdb7d746bdb662a7a183c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SectionArea: {fileID: 471435073}
+  sectionarea: {fileID: 471435073}
   rect_width: 76.9
   rect_height: 58
   collider_depth: -10
@@ -3012,6 +3012,11 @@ PrefabInstance:
       propertyPath: cation
       value: 
       objectReference: {fileID: 687768668}
+    - target: {fileID: 7700322619872413139, guid: 94cbf3a9f77df994fa0fa8fed3becd10,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94cbf3a9f77df994fa0fa8fed3becd10, type: 3}
 --- !u!1 &1779192844
@@ -3999,7 +4004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c329680072f7124c8ebdfec570057e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SectionRect:
+  section:
     serializedVersion: 2
     x: 0
     y: 0

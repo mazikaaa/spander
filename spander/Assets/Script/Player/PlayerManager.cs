@@ -71,7 +71,7 @@ public class PlayerManager : MonoBehaviour
 
         //弾の発射機構
         shottime += Time.deltaTime;
-        //オートモードが効いているとき
+        //オートショットモードが効いているときは自動で発射する
         if (outoshotflag)
         {
             if (Input.GetKeyDown(KeyCode.W)){
@@ -107,6 +107,7 @@ public class PlayerManager : MonoBehaviour
             }
         }
 
+        //対応するキーを長押し　または　対応するキーを一回押す（オートショットモード）ことで弾を連射する
         if ((Input.GetKey(KeyCode.W) ||shotkey==1) && shottime > shotspan)
         {
             Audio.volume = 0.1f;
@@ -268,23 +269,26 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    //アイテムのバリアを解除する
     public void DeleteBarrier()
     {
         barrier.SetActive(false);
     }
 
+    //オートショットモードに切り替える
     public void ActiveOutMode(bool flag)
     {
         outoshotflag = flag;
         shotkey = 0;
     }
 
+    //被弾後の無敵状態を解除する。（アニメーション終了後に起動）
     void SetDamegeFlag()
     {
         damageflag = true;
-        Debug.Log(damageflag);
     }
 
+    //HPが少なくったとき警告を出す
     void CationDanger()
     {
         cation.GetComponent<Text>().text = "Danger";

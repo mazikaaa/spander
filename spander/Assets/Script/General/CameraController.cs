@@ -11,12 +11,12 @@ public class CameraController : MonoBehaviour
     // カメラの幅と高さ
     private float cameraRangeWidth, cameraRangeHeight;
 
-    // 各オブジェクトとコンポーネント
+    // 各オブジェクト
     private GameObject mainCamera;
     private GameObject player;
 
     // セクション範囲定義用
-    public Rect SectionRect;
+    public Rect section;
     private Vector3 top_left, bottom_left, top_right, bottom_right;
     Vector3 newPosition;
 
@@ -45,24 +45,24 @@ public class CameraController : MonoBehaviour
         cameraRangeHeight = Vector3.Distance(bottom_left, top_left);
 
         // カメラ位置をセクション範囲内に収める
-        float newX = Mathf.Clamp(newPosition.x, SectionRect.xMin +cameraRangeWidth / 2, SectionRect.xMax-cameraRangeWidth / 2);
-        float newY = Mathf.Clamp(newPosition.y, SectionRect.yMin+cameraRangeHeight / 2, SectionRect.yMax -cameraRangeHeight / 2);
+        float newX = Mathf.Clamp(newPosition.x, section.xMin +cameraRangeWidth / 2, section.xMax-cameraRangeWidth / 2);
+        float newY = Mathf.Clamp(newPosition.y, section.yMin+cameraRangeHeight / 2, section.yMax -cameraRangeHeight / 2);
 
         transform.position = new Vector3(newX, newY, newPosition.z);
     }
 
+    //ゲーム実行中にカメラ描画範囲を表示する(カメラ範囲確認用)
     void OnDrawGizmos()
     {
-        // カメラ描画範囲を表示
         Gizmos.color = Color.green;
         Gizmos.DrawLine(bottom_left, top_left);
         Gizmos.DrawLine(top_left, top_right);
         Gizmos.DrawLine(top_right, bottom_right);
         Gizmos.DrawLine(bottom_right, bottom_left);
     }
-    public void setSectionRect(Rect SectionRect)
+    public void setSectionRect(Rect Section)
     {
-        this.SectionRect = SectionRect;
+        section = Section;
     }
 
 }

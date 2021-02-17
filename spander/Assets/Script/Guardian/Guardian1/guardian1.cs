@@ -48,7 +48,6 @@ public class guardian1: MonoBehaviour
     {
         shottime += Time.deltaTime;
 
-        // プレイヤーと炎の座標所得
         Vector2 next = player.transform.position;
         Vector2 now = transform.position;
         // 目的となる角度を取得する
@@ -64,9 +63,10 @@ public class guardian1: MonoBehaviour
             shotspeed = Random.Range(5.0f, 9.0f);
             shotdelete = Random.Range(5.0f, 9.0f);
             GameObject bullet = Instantiate(bulletPrefab[color], new Vector3(transform.position.x, transform.position.y, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
-            bullet.GetComponent<Guardian_Bullet_1>().angle = shotangle * Mathf.Deg2Rad;
-            bullet.GetComponent<Guardian_Bullet_1>().speed = shotspeed;
-            bullet.GetComponent<Guardian_Bullet_1>().deletespan = shotdelete;
+            Guardian_Bullet_1 bulletdata = bullet.GetComponent<Guardian_Bullet_1>();
+            bulletdata.angle = shotangle * Mathf.Deg2Rad;
+            bulletdata.speed = shotspeed;
+            bulletdata.deletespan = shotdelete;
             shottime = 0;
         }
     }

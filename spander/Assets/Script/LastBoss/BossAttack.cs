@@ -52,7 +52,7 @@ public class BossAttack : MonoBehaviour
             {
                 shotcount2[i] += Time.deltaTime;
             }
-
+            //ボスの攻撃1
             if (shotcount2[0] > shotspan2[0])
             {
                 randomangle = Random.Range(-45, 46);
@@ -66,6 +66,8 @@ public class BossAttack : MonoBehaviour
                 bullet4.GetComponent<Boss_Bullet1>().angle = (270 + randomangle) * Mathf.Deg2Rad;
                 shotcount2[0] = 0.0f;
             }
+
+            //ボスの攻撃2
             if (shotcount2[1] > shotspan2[1])
             {
                 GameObject bullet1 = Instantiate(bulletPrefab2[1], new Vector3(transform.position.x + 2.0f, transform.position.y-2.0f, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
@@ -78,6 +80,8 @@ public class BossAttack : MonoBehaviour
                 bullet4.GetComponent<Boss_Bullet2>().angle = 45 * Mathf.Deg2Rad;
                 shotcount2[1] = 0.0f;
             }
+
+            //ボスの攻撃3
             if (shotcount2[2] > shotspan2[2])
             {
                 for (i = 0; i < 36; i++)
@@ -86,9 +90,10 @@ public class BossAttack : MonoBehaviour
                     shotspeed = Random.Range(6.0f, 10f);
                     deletetime = Random.Range(6.0f, 10.0f);
                     GameObject bullet = Instantiate(bulletPrefab3[color], new Vector3(transform.position.x, transform.position.y, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
-                    bullet.GetComponent<Guardian_Bullet_1>().angle = i*10*Mathf.Deg2Rad;
-                    bullet.GetComponent<Guardian_Bullet_1>().speed = shotspeed;
-                    bullet.GetComponent<Guardian_Bullet_1>().deletespan = deletetime;
+                    Guardian_Bullet_1 bulletdata = bullet.GetComponent<Guardian_Bullet_1>();
+                    bulletdata.angle = i*10*Mathf.Deg2Rad;
+                    bulletdata.speed = shotspeed;
+                    bulletdata.deletespan = deletetime;
                 }
                 shotcount2[2] = 0.0f;
             }

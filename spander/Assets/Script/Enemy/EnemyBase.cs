@@ -34,6 +34,7 @@ public class EnemyBase : MonoBehaviour
         renderer = GetComponent<SpriteRenderer>();
     }
 
+    //敵の速度を指定
     protected virtual void SetVelocity()
     {
         float vx = Mathf.Cos(Mathf.Deg2Rad * targetangle) * speed;
@@ -41,6 +42,7 @@ public class EnemyBase : MonoBehaviour
         rigid.velocity = new Vector2(vx, vy);
     }
 
+    //敵の方向を指定
     protected virtual void SetAngle()
     {
         Vector2 next = player.transform.position;

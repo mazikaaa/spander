@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
         }
 
 
-        //ゲージ関連
+        //ゲージ関連（HPに対応してゲージを減らす）
         HP = PlayerPrefs.GetInt("HP", 100);
         /*Debug = GameObject.Find("Debug");
         Debug.GetComponent<Text>().text = HP.ToString("F1");*/
@@ -92,6 +92,7 @@ public class GameManager : MonoBehaviour
     {
         gameCleartime -= Time.deltaTime;
 
+        //アイテムのバリアを使った時、アイテムの使用時間を制御する
         if (barrriertime > 0.0f)
         {
             barrier.SetActive(true);
@@ -120,6 +121,7 @@ public class GameManager : MonoBehaviour
 
         }
 
+        //
         if (gameCleartime < 30.0f&&cationflag)
         {
             CationTime();
@@ -250,6 +252,7 @@ public class GameManager : MonoBehaviour
         item_image[i].SetActive(false);
     }
 
+    //ゲームクリアまでの時間が近くなっていることを知らせる警告を出す
     private void CationTime()
     {
         cation_text.GetComponent<Text>().text = "30.00";
