@@ -2,8 +2,9 @@
 ① code(黄緑色のボタン)→Download ZIPよりフォルダをダウンロード  
 ②「gamefile_spander」のフォルダをクリック  
 ③「spander.exe」をクリック  
-###動作環境  
+### 動作環境  
 Windows環境  
+  
 CPU:Intel Core i5-8250U  
 メモリ:8.00GB  
 GPU:なし  
