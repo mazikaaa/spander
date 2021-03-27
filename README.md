@@ -5,7 +5,7 @@
 ### 動作環境  
 Windows環境  
   
-OS:Windows10
+OS:Windows10  
 CPU:Intel Core i5-8250U  
 メモリ:8.00GB  
 GPU:なし  
